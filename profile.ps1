@@ -13,6 +13,7 @@ set HOME $env:HOME -Force
 . $installDir\git-extras-windows\load.ps1
 . $installDir\git-tfs\load.ps1
 . $installDir\posh-git\load.ps1
+. $installDir\go-shell\load.ps1
 
 if (GitIsInstalled -and PoshGitIsInstalled)
 {

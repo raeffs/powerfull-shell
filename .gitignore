@@ -10,6 +10,10 @@ git-extras-windows/*
 git-tfs/*
 !git-tfs/load.ps1
 
+!go-shell/
+go-shell/*
+!go-shell/load.ps1
+
 ﻿!posh-git/
 posh-git/*
 !posh-git/load.ps1
