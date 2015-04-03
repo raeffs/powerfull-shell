@@ -17,6 +17,7 @@ set HOME $env:HOME -Force
 
 if (GitIsInstalled -and PoshGitIsInstalled)
 {
+     $Global:GitTabSettings.AllCommands = $true
     Start-SshAgent -Quiet
 }
 
