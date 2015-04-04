@@ -15,6 +15,8 @@ set HOME $env:HOME -Force
 . $installDir\posh-git\load.ps1
 . $installDir\go-shell\load.ps1
 
+. $installDir\colored-ls\load.ps1
+
 if (GitIsInstalled -and PoshGitIsInstalled)
 {
      $Global:GitTabSettings.AllCommands = $true
