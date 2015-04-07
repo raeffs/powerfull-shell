@@ -67,7 +67,7 @@ New-CommandWrapper Out-Default `
                     Write-Host "----                -------------     ------ ----"
                     $notfirst=$true
                 }
-                WriteLs "DarkBlue" $_
+                WriteLs "Blue" $_
             }
             else
             {
