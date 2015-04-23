@@ -23,4 +23,11 @@ if (GitIsInstalled -and PoshGitIsInstalled)
     Start-SshAgent -Quiet
 }
 
+Clear-Host
+
 cd $env:HOME
+
+if (Test-Path $profile)
+{
+    . $profile
+}
