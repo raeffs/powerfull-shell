@@ -7,8 +7,8 @@ function GitIsInstalled
 function LoadGit
 {
     Set-Alias git "$installDir\git\bin\cmd\git.exe" -Scope Global
-    Set-Alias ssh-agent "$installDir\git\bin\bin\ssh-agent.exe" -Scope Global
-    Set-Alias ssh-add "$installDir\git\bin\bin\ssh-add.exe" -Scope Global
+    Set-Alias ssh-agent "$installDir\git\bin\usr\bin\ssh-agent.exe" -Scope Global
+    Set-Alias ssh-add "$installDir\git\bin\usr\bin\ssh-add.exe" -Scope Global
 }
 
 function InstallGit
@@ -21,8 +21,8 @@ function InstallGit
 
     if (!$install) { return }
 
-    $gitVersion = "Git-1.9.5-preview20150319"
-    $downloadUrl = "https://github.com/msysgit/msysgit/releases/download/$gitVersion/Portable$gitVersion.7z"
+    $gitVersion = "2.6.3"
+    $downloadUrl = "https://github.com/git-for-windows/git/releases/download/v$gitVersion.windows.1/PortableGit-$gitVersion-32-bit.7z.exe"
 
     write "Downloading Git ..."
     Invoke-WebRequest $downloadUrl -OutFile "$env:TEMP\git.7z"
