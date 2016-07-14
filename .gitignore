@@ -1,19 +1,10 @@
-﻿﻿!git/
-git/*
-!git/load.ps1
-
-!git-extras-windows/
-git-extras-windows/*
-!git-extras-windows/load.ps1
-
+﻿﻿
 ﻿!git-tfs/
 git-tfs/*
 !git-tfs/load.ps1
 
-!go-shell/
-go-shell/*
-!go-shell/load.ps1
-
 ﻿!posh-git/
 posh-git/*
 !posh-git/load.ps1
+
+*.sublime-workspace

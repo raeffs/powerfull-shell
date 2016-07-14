@@ -6,16 +6,16 @@ function LoadGitTfs
 
 function InstallGitTfs
 {
-    $install = PromptForConfirmation `
-        "Git Tfs Installation" `
-        "Do you want to install Git Tfs now?" `
-        "Install the latest version of Git Tfs." `
-        "Do not install Git Tfs. Git Tfs will not be available in powerfull shell."
+    # $install = PromptForConfirmation `
+    #     "Git Tfs Installation" `
+    #     "Do you want to install Git Tfs now?" `
+    #     "Install the latest version of Git Tfs." `
+    #     "Do not install Git Tfs. Git Tfs will not be available in powerfull shell."
 
-    if (!$install) { return }
+    # if (!$install) { return }
 
-    $gitTfsVersion = "v0.21.0"
-    $downloadUrl = "https://github.com/git-tfs/git-tfs/releases/download/$gitTfsVersion/GitTfs-$gitTfsVersion.zip"
+    $gitTfsVersion = "0.25.0"
+    $downloadUrl = "https://github.com/git-tfs/git-tfs/releases/download/v$gitTfsVersion/GitTfs-$gitTfsVersion.zip"
 
     write "Downloading Git Tfs ..."
     Invoke-WebRequest $downloadUrl -OutFile "$env:TEMP\git-tfs.zip"

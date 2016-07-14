@@ -10,10 +10,8 @@ set HOME $env:HOME -Force
 
 . $installDir\7zip\load.ps1
 . $installDir\git\load.ps1
-. $installDir\git-extras-windows\load.ps1
 . $installDir\git-tfs\load.ps1
 . $installDir\posh-git\load.ps1
-. $installDir\go-shell\load.ps1
 
 . $installDir\colored-ls\load.ps1
 
@@ -23,11 +21,16 @@ if (GitIsInstalled -and PoshGitIsInstalled)
     Start-SshAgent -Quiet
 }
 
-Clear-Host
-
 cd $env:HOME
 
 if (Test-Path $profile)
 {
     . $profile
 }
+
+if (Test-Path .\profile.ps1)
+{
+    . .\profile.ps1
+}
+
+Clear-Host

@@ -28,13 +28,13 @@ function LoadPoshGit
 
 function InstallPoshGit
 {
-    $install = PromptForConfirmation `
-        "Posh Git Installation" `
-        "Do you want to install Posh Git now?" `
-        "Install the latest version of Posh Git." `
-        "Do not install Posh Git."
+    # $install = PromptForConfirmation `
+    #     "Posh Git Installation" `
+    #     "Do you want to install Posh Git now?" `
+    #     "Install the latest version of Posh Git." `
+    #     "Do not install Posh Git."
 
-    if (!$install) { return }
+    # if (!$install) { return }
 
     write "Downloading Posh Git ..."
     Invoke-WebRequest "https://github.com/dahlbyk/posh-git/archive/master.zip" -OutFile "$env:TEMP\posh-git.zip"
